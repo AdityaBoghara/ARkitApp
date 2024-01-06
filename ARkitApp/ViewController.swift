@@ -150,6 +150,20 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         rollAll()
     }
     
+    
+    @IBAction func removeAll(_ sender: UIBarButtonItem) {
+        
+        if !diceArray.isEmpty {
+            for dice in diceArray {
+                dice.removeFromParentNode()
+            }
+            
+        }
+        
+        
+    }
+    
+    
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         //to detect the horizontal plane
         
